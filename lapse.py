@@ -15,13 +15,9 @@ with picamera.PiCamera() as camera:
                 break
             if  int(datetime.now().strftime("%H"))>=19:
                 camera.exposure_mode='night'
-                print('compreso')
             elif int(datetime.now().strftime("%H"))<=7: 
                 camera.exposure_mode='night'
-                print('compreso')
             else:
                 camera.exposure_mode='auto'
-                print('fuori')
-            
     finally:
         pass
